@@ -1,11 +1,55 @@
-html{
-    box-sizing: border-box;
+@import 'vars';
+@import 'global';
+@import 'fonts';
+
+
+
+//header start
+
+.header__top{
+    background-color: #eef1f3;
 }
-*,
-*::before,
-*::after{
-    box-sizing: inherit;
+.header__top-inner{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;    
 }
-body{
-    background-color: green;
+.header__menu-inner{
+    display: flex;
+    justify-content: space-between;
+}
+.header__btn{
+    padding: 9px;
+    width: 140px;
+    background-color: #0674ec;
+    color: #fff;
+    border-radius: 16px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+}
+.header__menu{
+    background-color: #fff;
+}
+.header__menu-inner{    
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+}
+.menu__list{    
+    li{
+        display: inline-block;
+        
+        & + li{
+            margin-left: 32px;
+        }
+        a{
+            color: #333;
+            font-weight: 15px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+    }
 }
