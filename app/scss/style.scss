@@ -138,6 +138,21 @@
     }
 }
 
-
+.test /*search__box*/{
+    min-height: 160px;
+    width: 100%;
+    background-image: url(../images/BG.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 
 //Create_Your_Own end
+
+//features start
+.features-inner{
+    min-height: 710px;
+    width: 100%;
+    background-color: /*#fff*/ red;
+}
+//features end
