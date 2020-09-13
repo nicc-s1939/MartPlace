@@ -36,21 +36,21 @@ gulp.task('browser-sync', function() {
     });
 });
 
-// gulp.task('script', function(){
-//     return gulp.src([
-//         'node_modules/slick-carousel/slick/slick.js',
-//         'node_modules/magnific-popup/dist/jquery.magnific-popup.js'
-//         пути до скаченых плагинов и далее объединение их и минификация в одном файле
-//     ])
-//         .pipe(concat('libs.min.js'))
-//         .pipe(uglify())
-//         .pipe(gulp.dest('app/js'))
-// })
+gulp.task('script', function(){
+    return gulp.src([
+        'node_modules/slick-carousel/slick/slick.js',
+        // 'node_modules/magnific-popup/dist/jquery.magnific-popup.js'
+        // пути до скаченых плагинов и далее объединение их и минификация в одном файле
+    ])
+        .pipe(concat('libs.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('app/js'))
+})
 
 gulp.task('style', function(){
     return gulp.src([
             'node_modules/normalize.css/normalize.css',
-//             'node_modules/slick-carousel/slick/slick.css',
+            'node_modules/slick-carousel/slick/slick.css',
 //         'node_modules/magnific-popup/dist/magnific-popup.css'
 //          пути до скаченых плагинов и далее объединение их и минификация в одном файле
     ])
@@ -65,4 +65,4 @@ gulp.task('watch', function(){
     gulp.watch('app/js/*.js', gulp.parallel('js'))
 });
 
-gulp.task('default',gulp.parallel('sass','browser-sync'/*,'script'*/,'style','watch'))
+gulp.task('default',gulp.parallel('sass','browser-sync','script','style','watch'))
