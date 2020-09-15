@@ -310,40 +310,55 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    .btm{
-        width: 130px;
-        height: 45px;
-        text-align: center;
-        padding-top: 14px;
-        font-weight: 500;
-        font-size: 15px;
-        border-radius: 20px;
-        outline: none;
-        cursor: pointer;
-    } 
+    .featured-item1-bg{
+        display: none;
+    }    
     .featured-item1{
         width: 50%;
-        height: 450px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        background-color: green;
-        .featured-item1-r{
-            margin-left: 10px;
-            background-color: #fff;
-            mix-blend-mode:screen;/*цвет текста какой фон, прозрачный текст*/
-        }
-        .featured-item1-l{
-            color: #fff;
-            border: 1px solid #fff;
-        }
-        
+        min-height: 450px;
+        background-color: #4e5760;
+        &:hover{
+            .featured-item1-bg{
+                min-height: 450px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                background-color: green;
+                .btm{
+                    width: 130px;
+                    height: 45px;
+                    text-align: center;
+                    padding-top: 14px;
+                    font-weight: 500;
+                    font-size: 15px;
+                    border-radius: 20px;
+                    outline: none;
+                    cursor: pointer;
+                } 
+                .featured-item1-r{
+                    margin-left: 10px;
+                    background-color: #fff;
+                    mix-blend-mode:screen;/*цвет текста какой фон, прозрачный текст*/
+                }
+                .featured-item1-l{
+                    color: #fff;
+                    border: 1px solid #fff; 
+                }
+            }
+        } 
     }
     .featured-item2{
         width: 50%;
+        padding: 50px 50px 24px;
+        min-height: 450px;
+        background-color: green;
+        .featured-item2-titel{
+            font-size: 24px;
+            font-weight: 500;
+        }
     }
 }
 
