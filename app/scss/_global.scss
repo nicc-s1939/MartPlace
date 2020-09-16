@@ -27,3 +27,21 @@ body{
     margin: 0 auto;
     padding: 0 15px;
 }
+.inner__Aazz-Word{
+    display: flex;
+    justify-content: start;
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 400;     
+    .Aazz,
+    .Word{
+        background-repeat: no-repeat;
+        background-position: left;
+        padding-left: 40px;
+        padding-right: 20px;
+        color: #000;
+    }
+    .Word{
+        color: #7347c1;
+    }
+}

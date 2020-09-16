@@ -352,14 +352,45 @@
     }
     .featured-item2{
         width: 50%;
-        padding: 50px 50px 24px;
+        padding: 50px 50px 24px;        
         min-height: 450px;
         background-color: green;
         .featured-item2-titel{
             font-size: 24px;
             font-weight: 500;
+            margin-bottom: 12px;
+        }    
+        .featured-item2-text{
+            .text{
+                font-size: 16px;
+                line-height: 30px;
+                color: #555;
+                margin: 0; 
+                margin-bottom: 34px;
+                min-width: 485px;
+            }
+
+            .inner__Aazz-Word{
+                margin-bottom: 33px;
+            }
+        }
+        .featured-item2-buttom{
+            a{
+                font-size: 16px;
+                line-height: 28px;
+                padding-left: 18px;
+                padding-right: 15px;
+                background-color: #f1f3f6;
+                border-radius: 11px;
+                margin-bottom: 44px;
+            }
+        }
+        .featured-item2-basket{
+            max-width: 485px;
+            border-top: 1px solid #ececec;
         }
     }
+    
 }
 
 
