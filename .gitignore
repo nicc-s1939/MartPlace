@@ -4,4 +4,5 @@
 .vs
 node_modules/
 app/css/
-
+app/js/main.min.js
+app/js/libs.min.js
