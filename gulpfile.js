@@ -39,30 +39,46 @@ gulp.task('browser-sync', function() {
 gulp.task('script', function(){
     return gulp.src([
         'node_modules/slick-carousel/slick/slick.js',
+        'node_modules/rateyo/src/jquery.rateyo.js',
+        // 'node_modules/rateyo/lib/cjs/rateyo.js',
         // 'node_modules/magnific-popup/dist/jquery.magnific-popup.js'
         // пути до скаченых плагинов и далее объединение их и минификация в одном файле
     ])
         .pipe(concat('libs.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('app/js'))
-})
+});
+
+gulp.task('script2', function(){
+    return gulp.src([
+        'app/js/main.js'
+        // пути до скаченых плагинов и далее объединение их и минификация в одном файле
+    ])
+        .pipe(rename({suffix:'.min'}))
+        .pipe(uglify())
+        .pipe(gulp.dest('app/js'))
+});
 
 gulp.task('style', function(){
     return gulp.src([
             'node_modules/normalize.css/normalize.css',
             'node_modules/slick-carousel/slick/slick.css',
+            'node_modules/linearicons/dist/web-font/style.css',
+            'node_modules/rateyo/src/jquery.rateyo.css',
+            // 'node_modules/rateyo/lib/cjs/rateyo.css',
 //         'node_modules/magnific-popup/dist/magnific-popup.css'
 //          пути до скаченых плагинов и далее объединение их и минификация в одном файле
     ])
         .pipe(concat('libs.min.css'))
         .pipe(cssmin())
         .pipe(gulp.dest('app/css'))
-})
+});
 
 gulp.task('watch', function(){
     gulp.watch('app/scss/**/*.scss', gulp.parallel('sass'))
     gulp.watch('app/*.html', gulp.parallel('html'))
     gulp.watch('app/js/*.js', gulp.parallel('js'))
+    gulp.watch('app/js/main.js', gulp.parallel('script2'))
 });
 
-gulp.task('default',gulp.parallel('sass','browser-sync','script','style','watch'))
+gulp.task('default',gulp.parallel('sass','browser-sync','script', 'script2','style','watch'))
